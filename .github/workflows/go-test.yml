@@ -29,3 +29,6 @@ jobs:
 
     - name: Test Integration
       run: sudo -E env PATH=$PATH go test -v -tags=integration ./...
+
+    - name: Linux ARM64 build
+      run: GOOS=linux GOARCH=arm64 go build ./...
